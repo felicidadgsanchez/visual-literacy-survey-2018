@@ -12,6 +12,9 @@ RUN mkdir -p /home/$NB_USER/datasets
 # Adding the datasets (csv files) included in this repository to the datasets folder 
 # in the Docker image.
 COPY datasets/* /home/$NB_USER/datasets/
+# Adding the backup of the notebooks included in this repository to the home directory
+# in the Docker image.
+COPY notebooks/* /home/$NB_USER/
 
 # Install all libraries and tools to use:
 #   spacy, nltk, gensim, plotly, autopep8, jupyter_contrib_nbextensions

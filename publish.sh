@@ -1,0 +1,1 @@
+docker push cbjuan/visual-literacy-survey-2018

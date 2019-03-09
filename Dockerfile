@@ -17,8 +17,8 @@ COPY datasets/* /home/$NB_USER/datasets/
 COPY notebooks/* /home/$NB_USER/
 
 # Install all libraries and tools to use:
-#   spacy, nltk, gensim, plotly, autopep8, jupyter_contrib_nbextensions
-RUN conda install  spacy nltk gensim plotly autopep8 jupyter_contrib_nbextensions && \
+#   spacy, nltk, gensim, plotly, autopep8, jupyter_contrib_nbextensions, cufflinks-py
+RUN conda install  spacy nltk gensim plotly autopep8 jupyter_contrib_nbextensions cufflinks-py && \
     pip install ipynb && \
     conda clean -tipsy
 

@@ -16,10 +16,10 @@ COPY datasets/* /home/$NB_USER/datasets/
 # in the Docker image.
 COPY notebooks/* /home/$NB_USER/
 
-# Install all libraries and tools to use:
-#   spacy, nltk, gensim, plotly, autopep8, jupyter_contrib_nbextensions, cufflinks-py
-RUN conda install  spacy nltk gensim plotly autopep8 jupyter_contrib_nbextensions cufflinks-py && \
+# Install all libraries and tools to use:cufflinks-py
+RUN conda install spacy nltk gensim plotly colorlover autopep8 jupyter_contrib_nbextensions && \
     pip install nbimporter && \
+    pip install plotly_express && \
     conda clean -tipsy
 
 # Activate Jupyter extensions: Hinterland & autopep8

@@ -18,8 +18,13 @@ COPY notebooks/* /home/$NB_USER/
 
 # Install all libraries and tools to use:cufflinks-py
 RUN conda install spacy nltk gensim plotly colorlover autopep8 jupyter_contrib_nbextensions && \
+    python -m spacy download en && \
+    python -m spacy download fr && \
+    python -m spacy download es && \
     pip install nbimporter && \
     pip install plotly_express && \
+    pip install langdetect && \
+    pip install wordcloud && \
     conda clean -tipsy
 
 # Activate Jupyter extensions: Hinterland & autopep8

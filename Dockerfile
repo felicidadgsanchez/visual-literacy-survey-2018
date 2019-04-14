@@ -12,6 +12,10 @@ RUN mkdir -p /home/$NB_USER/datasets
 # Adding the datasets (csv files) included in this repository to the datasets folder 
 # in the Docker image.
 COPY datasets/* /home/$NB_USER/datasets/
+# Creating the directory fonts/ in the /home/user if it does not exist previously
+RUN mkdir -p /home/$NB_USER/fonts
+# Adding the fonts included in this repository to the fonts folder in the Docker image.
+COPY fonts/* /home/$NB_USER/fonts/
 # Adding the backup of the notebooks included in this repository to the home directory
 # in the Docker image.
 COPY notebooks/* /home/$NB_USER/

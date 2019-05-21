@@ -1,1 +1,1 @@
-docker push cbjuan/visual-literacy-survey-2018
+docker push felicidadgsanchez/visual-literacy-survey-2018
